@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[CLOSING_DAYS] (
+    [Id]     UNIQUEIDENTIFIER NOT NULL,
+    [Season] NVARCHAR (50)    NULL,
+    [Date]   DATETIME         NULL,
+    [Type]   NVARCHAR (10)    NULL,
+    CONSTRAINT [PK_CLOSING_DAYS] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

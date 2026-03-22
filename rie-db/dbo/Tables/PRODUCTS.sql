@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[PRODUCTS] (
+    [Id]            UNIQUEIDENTIFIER NOT NULL,
+    [Name]          NVARCHAR (250)   NOT NULL,
+    [Description]   NVARCHAR (250)   NULL,
+    [IsActive]      INT              NULL,
+    [ProductTypeId] UNIQUEIDENTIFIER NULL,
+    CONSTRAINT [PK_PRODUCTS] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_PRODUCTS_PRODUCT_TYPES] FOREIGN KEY ([ProductTypeId]) REFERENCES [dbo].[PRODUCT_TYPES] ([Id])
+);
+
